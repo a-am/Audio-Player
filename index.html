@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AUDIO PLAYER - Adam Randlett</title>
+    <meta name="description" content="Lightwight skinnable javascript audio player" />
+    <link rel="stylesheet" href="audio_player.css">
+    <link rel="stylesheet" href="theme_2_audio_player.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            background-color: #f0f0f0;
+        }
+        h2{
+            margin-bottom: 1rem;
+        }
+        h5 {
+            font-weight: 300;
+            color: #aaaaaa;
+            margin-top:0px;
+            font-weight: 600;
+        }
+        h5 span {
+            font-weight: 300;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Audio Player</h2>
+    <h5>Melodic Groove <span>by Adam Randlett</span></h5>
+    <div style="width:100%;position:relative;">
+        <ul class="AudioPlayer ap-unibody live" id="AudioPlayer">
+            <li>
+                <div class='play-btn'>
+                    <div class="ap__play"><svg class="icn icon-controller-play"><use xlink:href="#icon-controller-play"></use></svg></div>
+                    <div class="ap__pause"><svg class="icn icon-controller-pause"><use xlink:href="#icon-controller-pause"></use></svg></div>
+                </div>
+            </li>
+            <li>
+                <div class='sep for-play'></div>
+            </li>
+            <li>
+                <div class='time-current'> 00:00 </div>
+                <div class='time-duration'> 00:00 </div>
+            </li>
+            <li class='container'>
+                <div class='progress-bar-container'>
+                    <div class='progress-bar-wrapper'>
+                        <div class='seek-bar'></div>
+                        <div class='play-bar transition'></div>
+                        <div class='load-bar transition'></div>
+                    </div>
+                </div>
+            </li>
+            <!-- <li class='ap__download'>
+                <a href="./MelodicGroove.m4a" download><svg class="icn icon-download"><use xlink:href="#icon-download"></use></svg></a>
+            </li> -->
+        </ul>
+        <audio src="MelodicGroove.m4a" controls="false"></audio>
+    </div>
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="icon-controller-pause" viewBox="0 0 80 80">
+                <title>controller-pause</title>
+                <path d="M60 12h-8c-2.212 0-4 0.192-4 2.4v51.2c0 2.208 1.788 2.4 4 2.4h8c2.212 0 4-0.192 4-2.4v-51.2c0-2.208-1.788-2.4-4-2.4zM28 12h-8c-2.212 0-4 0.192-4 2.4v51.2c0 2.208 1.788 2.4 4 2.4h8c2.212 0 4-0.192 4-2.4v-51.2c0-2.208-1.788-2.4-4-2.4z"></path>
+            </symbol>
+            <symbol id="icon-controller-play" viewBox="0 0 80 80">
+                <title>controller-play</title>
+                <path d="M60 40.004c0 1.196-1.22 2.056-1.22 2.056l-34.244 21.212c-2.496 1.636-4.536 0.424-4.536-2.676v-41.188c0-3.108 2.040-4.312 4.54-2.68l34.244 21.22c-0.004 0 1.216 0.86 1.216 2.056z"></path>
+            </symbol>
+            <symbol id="icon-download" viewBox="0 0 80 80">
+                <title>download</title>
+                <path d="M60 28h-12v-24h-16v24h-12l20 20 20-20zM77.352 54.128c-0.84-0.896-6.444-6.892-8.044-8.456-1.060-1.036-2.576-1.672-4.168-1.672h-7.028l12.256 11.976h-14.176c-0.408 0-0.776 0.208-0.96 0.532l-3.264 7.492h-23.936l-3.264-7.492c-0.184-0.324-0.556-0.532-0.96-0.532h-14.176l12.252-11.976h-7.024c-1.588 0-3.104 0.636-4.168 1.672-1.6 1.568-7.204 7.564-8.044 8.456-1.956 2.084-3.032 3.744-2.52 5.796l2.244 12.296c0.512 2.056 2.764 3.744 5.008 3.744h65.248c2.244 0 4.496-1.688 5.008-3.744l2.244-12.296c0.504-2.052-0.568-3.712-2.528-5.796z"></path>
+            </symbol>
+        </defs>
+    </svg>
+    <script src="AudioPlayer.js"></script>
+    <script>
+        let audiop = document.querySelector('audio');
+        let ap = document.querySelector('#AudioPlayer');
+        let player = new AudioPlayer(audiop, ap);
+    </script>
+</body>
+</html>

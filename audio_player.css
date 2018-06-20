@@ -1,0 +1,223 @@
+.ap-unibody,
+.ap-unibody * {
+    display: block;
+    cursor: default;
+    border: none;
+    overflow: visible;
+    position: static;
+    background: none;
+    float: none;
+    z-index: auto;
+    list-style: none;
+    line-height: 0;
+    direction: ltr;
+    text-align: center;
+    opacity: 1;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ap-unibody {
+    overflow: hidden;
+}
+
+.ap-unibody li {
+    float: left;
+    height: 100%;
+}
+
+.ap-unibody .play-btn,
+.ap-unibody .volume-btn,
+.ap-unibody .volume-bar-container,
+.ap-unibody .volume-bar,
+.ap-unibody .seek-bar,
+.ap-unibody .play-bar,
+.ap-unibody .progress-bar-wrapper {
+    cursor: pointer;
+}
+
+.ap-unibody .play-btn,
+.ap-unibody .volume-btn {
+    height: 100%;
+}
+
+.ap-unibody i {
+    line-height: inherit;
+    vertical-align: middle;
+}
+
+.ap-unibody .play-btn:hover {}
+
+.ap-unibody .progress-bar-container,
+.ap-unibody .volume-bar-container {}
+
+.ap-unibody .volume-bar-container {}
+
+.ap-unibody .progress-bar-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ap-unibody .seek-bar {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    -webkit-transition: width 1s ease;
+    -khtml-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    transition: width 1s ease;
+    -webkit-transform: translateZ(0);
+}
+
+.ap-unibody .play-bar,
+.ap-unibody .seek-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ap-unibody .volume-bar,
+.ap-unibody .play-bar,
+.ap-unibody .load-bar {
+    width: 0;
+    height: 100%;
+    -webkit-transform: translateZ(0);
+}
+
+.ap-unibody .play-bar.transition {
+    z-index: 1;
+    -webkit-transition: width 0.5s ease;
+    -khtml-transition: width 0.5s ease;
+    -moz-transition: width 0.5s ease;
+    -o-transition: width 0.5s ease;
+    transition: width 0.5s ease;
+}
+
+.ap-unibody .load-bar.transition {
+    z-index: 0;
+    -webkit-transition: width 0.5s ease;
+    -khtml-transition: width 0.5s ease;
+    -moz-transition: width 0.5s ease;
+    -o-transition: width 0.5s ease;
+    transition: width 0.5s ease;
+}
+
+.ap-unibody .time-duration,
+.ap-unibody .time-current {}
+
+.ap-unibody .volume-btn:hover {}
+
+.ap-unibody .sep {}
+
+.ap-unibody.playing .play-btn {}
+
+.ap-unibody.playing .play-btn:hover {}
+
+.ap-unibody.mute .volume-btn {}
+
+.ap-unibody.mute .volume-btn:hover {}
+
+.ap-unibody.error .duration-txt,
+.ap-unibody.error .sep,
+.ap-unibody.error .volume-btn,
+.ap-unibody.error .progress-bar-container,
+.ap-unibody.error .volume-bar-container {
+    display: none;
+}
+
+.ap-unibody.error .for-play {
+    display: block;
+}
+
+.ap-unibody.error .play-btn {
+    cursor: pointer;
+}
+
+
+/* ---------------------------------- *\
+    FONTS
+\* ---------------------------------- */
+
+
+/* @font-face {
+	font-family: 'ap';
+	src:url('ap.eot');
+	src:url('ap.eot?#iefix') format('embedded-opentype'),
+		url('ap.woff') format('woff'),
+		url('ap.ttf') format('truetype'),
+		url('ap.svg#ap') format('svg');
+	font-weight: normal;
+	font-style: normal;
+} */
+
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+
+
+/* [data-icon]:before {
+	font-family: 'ap';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+} */
+
+
+/* Use the following CSS code if you want to have a class per icon */
+
+
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+
+
+/* .icon-play, .icon-pause, .icon-stop, .icon-resize-enlarge, .icon-resize-shrink, .icon-cw, .icon-volume, .icon-volume-mute, .icon-volume-medium {
+	font-family: 'ap';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-play:before {
+	content: "\e000";
+}
+.icon-pause:before {
+	content: "\e001";
+}
+.icon-stop:before {
+	content: "\e002";
+}
+.icon-resize-enlarge:before {
+	content: "\e003";
+}
+.icon-resize-shrink:before {
+	content: "\e004";
+}
+.icon-cw:before {
+	content: "\e005";
+}
+.icon-volume:before {
+	content: "\e006";
+}
+.icon-volume-mute:before {
+	content: "\e008";
+}
+.icon-volume-medium:before {
+	content: "\e007";
+} */
