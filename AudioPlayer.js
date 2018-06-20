@@ -1,3 +1,10 @@
+/**
+ * HTML/JS Audio Player
+ * by Adam Randlett (adam@randlett.net)
+ * version 1.0.0
+ * MIT License
+ */
+
 class AudioPlayer {
     constructor(audioElm, uiElm, options) {
         this.audio = audioElm;
